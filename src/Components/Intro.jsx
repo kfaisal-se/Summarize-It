@@ -8,14 +8,14 @@ const Intro = () => {
         <button
           type='button'
           className='black_btn'
-          onClick={() => window.open('https://github.com/kfaisal-se/Summerize-It')}
+          onClick={() => window.open('https://github.com/kfaisal-se/Summarize-It')}
         >
           GitHub
         </button>
       </nav>
 
       <h1 className='head_text'>
-        Summarize anything with <br />
+        Summarize Anything With <br />
         <span className='orange_gradient'>OpenAI GPT-4</span>
       </h1>
 
