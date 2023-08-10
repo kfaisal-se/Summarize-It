@@ -17,7 +17,6 @@ const Demo = () => {
       setAllAtricles(articlesFromLocalStorage);
     }
   }, [])
-  
 
   const handleSubmit = async(e) => {
     e.preventDefault();
@@ -32,6 +31,10 @@ const Demo = () => {
 
       localStorage.setItem('articles', JSON.stringify(updatedAllArticles));
     }
+  }
+
+  const handleCopy = (value) => {
+    
   }
   return (
     <section className="w-full max-w-xl mt-16">
