@@ -27,9 +27,12 @@ const Intro = () => {
       </h1>
 
       <h1 className='desc'>
-        Simplify your reading and learning process with Summerize It,
-        An open source ariticle summarizer that transforms lengthy
+        Simplify your reading and learning process with "Summerize It".
+        An AI powered article summarizer that transforms lengthy
         articles into clear and concise summeries.
+        <br />
+        <br />
+        <span className="blue_gradient">Paste the URL and see the magic.</span>
       </h1>
     </header>
   )
