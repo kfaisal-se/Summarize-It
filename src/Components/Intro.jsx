@@ -4,14 +4,21 @@ const Intro = () => {
   return (
     <header className='flex flex-col items-center justify-center w-full'>
       <nav className='flex items-center justify-between w-full pt-5 mb-10'>
-        <img src={logo} alt='sumz_logo' className='object-contain w-28'/>
-        <button
-          type='button'
-          className='black_btn'
-          onClick={() => window.open('https://github.com/kfaisal-se/Summarize-It')}
-        >
-          GitHub
-        </button>
+        {/* <img src={logo} alt='sumz_logo' className='object-contain w-28'/> */}
+        <div className='flex flex-col items-center justify-between w-full gap-2 sm:flex-row'>
+          <div>
+            <span className='px-5 mx-1 text-3xl border border-blue-500 rounded-full blue_gradient'>Summarize</span>
+            <span className='px-5 text-3xl border border-blue-500 rounded-full blue_gradient'>IT</span>
+          </div>
+
+          <button
+            type='button'
+            className='black_btn '
+            onClick={() => window.open('https://github.com/kfaisal-se/Summarize-It')}
+          >
+            GitHub
+          </button>
+        </div>
       </nav>
 
       <h1 className='head_text'>
