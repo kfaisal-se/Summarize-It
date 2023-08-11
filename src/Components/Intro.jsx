@@ -16,7 +16,7 @@ const Intro = () => {
 
       <h1 className='head_text'>
         Summarize Anything With <br />
-        <span className='orange_gradient'>OpenAI GPT-4</span>
+        <span className='blue_gradient'>OpenAI GPT-4</span>
       </h1>
 
       <h1 className='desc'>
