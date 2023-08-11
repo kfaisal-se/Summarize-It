@@ -27,7 +27,8 @@ const Intro = () => {
       </h1>
 
       <h1 className='desc'>
-        Simplify your reading and learning process with "Summerize It".
+        Simplify your reading and learning process with "Summarize It".
+        <br />
         An AI powered article summarizer that transforms lengthy
         articles into clear and concise summeries.
         <br />
