@@ -30,7 +30,7 @@ const Intro = () => {
         Simplify your reading and learning process with "Summarize It".
         <br />
         An AI powered article summarizer that transforms lengthy
-        articles into clear and concise summeries.
+        articles into clear and concise summaries.
         <br />
         <br />
         <span className="blue_gradient">Paste the URL and see the magic.</span>
