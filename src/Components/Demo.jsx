@@ -39,7 +39,7 @@ const Demo = () => {
     navigator.clipboard.writeText(copyUrl);
     setTimeout(() => setCopied(false), 3000);
   };
-  
+
   const handleURLDelete = (url) => {
     setAllAtricles(oldValues => {return oldValues.filter(item => item !== url )});
     localStorage.setItem('articles', JSON.stringify(allArticles));
@@ -97,7 +97,7 @@ const Demo = () => {
           ))}
         </div>
       </div>
-
+      
       {/* Display Results */}
       <div className="flex items-center justify-center max-w-full my-10">
         {isFetching ? (
@@ -106,9 +106,11 @@ const Demo = () => {
           <p className="font-bold text-center text-black font-inter">
             Well, that wasn't supposed to happen...
             <br />
-            <span className="font-normal text-gray-700 font-satoshi">
-              {error?.data?.error}
-            </span>
+            <div className="summary_box">
+              <span className="font-normal text-gray-700 font-satoshi">
+                {error?.data?.error ? error?.data?.error : error?.data?.message}
+              </span>
+            </div>
           </p>
         ) : (
           article.summary && (
