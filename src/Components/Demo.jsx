@@ -29,7 +29,7 @@ const Demo = () => {
 
       setArticle(newArticle);
       setAllAtricles(updatedAllArticles);
-
+      
       localStorage.setItem('articles', JSON.stringify(updatedAllArticles));
     }
   }
@@ -39,6 +39,11 @@ const Demo = () => {
     navigator.clipboard.writeText(copyUrl);
     setTimeout(() => setCopied(false), 3000);
   };
+  
+  const handleURLDelete = (url) => {
+    setAllAtricles(oldValues => {return oldValues.filter(item => item !== url )});
+    localStorage.setItem('articles', JSON.stringify(allArticles));
+  }
 
   return (
     <section className="w-full max-w-xl mt-3">
@@ -69,12 +74,12 @@ const Demo = () => {
             ↵
           </button>
         </form>
+        
         {/* Browse History */}
         <div className="flex flex-col gap-1 overflow-y-auto max-h-60">
           {allArticles.map((item, index) => (
             <div
               key={`link-${index}`}
-              onClick={() => setArticle(item)}
               className="link_card"
             >
               <div className="copy_btn" onClick={() => handleCopy(item.url)}>
@@ -84,13 +89,15 @@ const Demo = () => {
                   className="w-[40%] h-[40%] object-contain"
                 />
               </div>
-              <p className="flex-1 text-sm font-medium text-blue-700 truncate font-satoshi">
+              <p onClick={() => setArticle(item)} className="flex-1 text-sm font-medium text-blue-700 truncate font-satoshi">
                 {item.url}
               </p>
+              <div className="delete_btn" onClick={() => handleURLDelete(item)}></div>
             </div>
           ))}
         </div>
       </div>
+
       {/* Display Results */}
       <div className="flex items-center justify-center max-w-full my-10">
         {isFetching ? (
