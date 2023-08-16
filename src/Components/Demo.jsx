@@ -102,30 +102,30 @@ const Demo = () => {
       <div className="flex items-center justify-center max-w-full my-10">
         {isFetching ? (
           <img src={loader} alt="loader" className="object-contain w-10 h-10" />
-        ) : error ? (
-          <p className="font-bold text-center text-black font-inter">
-            Well, that wasn't supposed to happen...
-            <br />
-            <div className="summary_box">
-              <span className="font-normal text-gray-700 font-satoshi">
-                {error?.data?.error ? error?.data?.error : error?.data?.message}
-              </span>
-            </div>
-          </p>
-        ) : (
-          article.summary && (
-            <div className="flex flex-col gap-3">
-              <h2 className="text-xl font-bold text-gray-600 font-satoshi">
-                Article <span className="blue_gradient">Summary</span>
-              </h2>
+          ) : error ? (
+            <p className="font-bold text-center text-black font-inter">
+              Well, that wasn't supposed to happen...
+              <br />
               <div className="summary_box">
-                <p className="text-sm font-medium text-gray-700 font-inter">
-                  {article.summary}
-                </p>
+                <span className="font-normal text-gray-700 font-satoshi">
+                  {error?.data?.error ? error?.data?.error : error?.data?.message}
+                </span>
               </div>
-            </div>
-          )
-        )}
+            </p>
+          ) : (
+            article.summary && (
+              <div className="flex flex-col gap-3">
+                <h2 className="text-xl font-bold text-gray-600 font-satoshi">
+                  Article <span className="blue_gradient">Summary</span>
+                </h2>
+                <div className="summary_box">
+                  <p className="text-sm font-medium text-gray-700 font-inter">
+                    {article.summary}
+                  </p>
+                </div>
+              </div>
+            ))
+          }
       </div>
     </section>
   )
